@@ -1,0 +1,10 @@
+extends ./pug/layouts/page-layout/page.pug
+block variables
+    - const title = 'Healthy food'
+block content
+    include ./pug/sections/header.pug
+    main(role="main")
+        include ./pug/sections/product-preview.pug
+        include ./pug/sections/features.pug
+        
+    

@@ -1,0 +1,23 @@
+section.product-preview
+    .container
+        section.select-panel
+            .select-panel-buttons-wrapper
+                button.button-select organic #[span.bold-text fruits]
+                button.button-select organic #[span.bold-text vegetables]
+            .select-panel-logo
+                img(src="img/badges/badge.png", alt="badge")
+            .select-panel-buttons-wrapper
+                button.button-select organic #[span.bold-text juices]
+                button.button-select organic #[span.bold-text dried fruits]
+    section.slider-wrapper
+        section.slider
+            +productCard("organic", "img/products/product-1.png", "tomato", "$50.00", "tomato")
+            +productCard("organic", "img/products/product-2.png", "cabbage", "$50.00", "cabbage")
+            +productCard("organic", "img/products/product-3.png", "cherry", "$50.00", "cherry")
+            +productCard("organic", "img/products/product-4.png", "ginger", "$50.00", "ginger")
+        section.slider-controls
+            span.slider-controls__item
+            span.slider-controls__item.active
+            span.slider-controls__item
+            span.slider-controls__item
+            span.slider-controls__item

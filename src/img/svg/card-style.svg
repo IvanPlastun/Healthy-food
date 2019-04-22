@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="59" viewBox="0 0 270 59">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="card-style.svg" class="cls-1" d="M510.729,1622l-0.532.02h0.53Zm0,0.04-0.532-.02-0.521.02,0-.02c-55.386.19-67.147,30.73-134.678,33.5V1681H645v-25.49c-67.171-2.88-79-33.3-134.273-33.49Zm-1.053-.04,0,0.02H510.2Z" transform="translate(-375 -1622)"/>
+</svg>
