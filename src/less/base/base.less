@@ -57,3 +57,49 @@ body {
 .transition {
     transition: all 0.3s ease-in;
 }
+
+/* *************** CARD INSIDE STYLES **************** */
+.product-card-top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 320px;
+    border-radius: 14px;
+    background-color: #f7f6f2;
+    position: relative;
+    z-index: 1;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.product-card__style-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.product-card-bottom {
+    height: 123px;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.product-card__title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #525252;
+    font-weight: 400;
+}
+
+.product-card__price {
+    font-family: @fontHelvetica;
+    font-size: 14px;
+    font-weight: bold;
+    color: #7fbb00;
+}

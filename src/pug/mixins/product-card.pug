@@ -1,12 +1,12 @@
 mixin productCard(text, imgPath, boldtext, price, altText)
-    section.slider-product-card
-                section.slider-product-card-top
-                    section.slider-product-card-top-hover-panel
-                        span.slider-product-card-top-hover-panel__icon.slider-product-card-top-hover-panel__icon--like <i class="fas fa-heart"></i>
-                        span.slider-product-card-top-hover-panel__icon.slider-product-card-top-hover-panel__icon--basket <i class="fas fa-shopping-basket"></i>
-                        span.slider-product-card-top-hover-panel__icon.slider-product-card-top-hover-panel__icon--size <i class="fas fa-arrows-alt"></i>
-                    img(src=imgPath, alt=altText)
-                    img.slider-product-card__style-img(src="img/svg/card-style.svg", alt="style-line")
-                section.slider-product-card-bottom
-                    h6.slider-product-card__title #{text} #[span.bold-text #{boldtext}]
-                    span.slider-product-card__price #{price}
+    section.product-card
+        section.product-card-top
+            section.product-card-top-hover-panel
+                span.product-card-top-hover-panel__icon.product-card-top-hover-panel__icon--like <i class="fas fa-heart"></i>
+                span.product-card-top-hover-panel__icon.product-card-top-hover-panel__icon--basket <i class="fas fa-shopping-basket"></i>
+                span.product-card-top-hover-panel__icon.product-card-top-hover-panel__icon--size <i class="fas fa-arrows-alt"></i>
+            img(src=imgPath, alt=altText)
+            img.product-card__style-img(src="img/svg/card-style.svg", alt="style-line")
+        section.product-card-bottom
+            h6.product-card__title #{text} #[span.bold-text #{boldtext}]
+            span.product-card__price #{price}

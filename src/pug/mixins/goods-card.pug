@@ -1,0 +1,12 @@
+mixin goodsCard(titleText, boldTitleText, imgPath, price, oldPrice, altText="")    
+    section.goods-card
+        section.goods-card-top
+            if (altText)
+                img(src=imgPath, alt=altText)
+            else
+                img(src="img/products/mashroom.png")
+            img.goods-card__style-img(src="img/svg/card-style.svg", alt="style-line")
+        section.goods-card-bottom
+            h6.goods-card__title #{titleText} #[span.bold-text #{boldTitleText}]
+            span.goods-card__price #{price} 
+            span.goods-card__old-price #{oldPrice}
