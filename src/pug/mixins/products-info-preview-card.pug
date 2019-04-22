@@ -1,0 +1,9 @@
+mixin productInfoPreviewCard(titleText, titleBoldText, imgPath, quantityItems, altText="")
+    section.products-info-preview-cards-card
+        if (altText)
+            img(src=imgPath, alt=altText)
+        else 
+            img(src=imgPath)
+        span.products-info-preview-cards-card__line
+        h6.products-info-preview-cards-card__title #{titleText} #[span.bold-text #{titleBoldText}]
+        span.products-info-preview-cards-card__quantity #{quantityItems}
