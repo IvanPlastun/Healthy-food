@@ -1,0 +1,10 @@
+mixin featureInfoCard(titleText, boldTitleText, imgPath, altText = "")
+    section.features-info-card
+        if (altText)
+            img.features-info-card__img(src=imgPath, alt=altText)
+        else
+            img.features-info-card__img(src=imgPath)
+        h6.features-info-card__title #{titleText}  #[span.bold-text #{boldTitleText}]
+        if (block)
+            block
+        a.features-info-card__button(href="#!") Read more

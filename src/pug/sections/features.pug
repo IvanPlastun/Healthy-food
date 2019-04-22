@@ -1,12 +1,19 @@
 section.features
     section.container
         section.features-description
-            h2.features-description__title we are #[span.bold-text organic farmfood]
-            span.subtitle About naturix farmfood
+            h2.features-description__title we are #[span.bold-text.features-description__title--leafimg organic farmfood]
+            span.subtitle.features-description--lines About naturix farmfood
             p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         section.features-info
-            section.features-info-card
-                h6.features-info-card__title fresh from naturix farm
+            +featureInfoCard("fresh from", "naturix farm", "img/features/1.png", "feature one")
                 p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
-                a.features-info-card__button(href="#!") Read more
+            +featureInfoCard("100%", "organic goods", "img/features/2.png", "feature two")
+                p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
+            +featureInfoCard("premium", "quality", "img/features/3.png", "feature three")
+                p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
+            +featureInfoCard("100%", "natural", "img/features/4.png", "feature four")
+                p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
+        section.features-image
+            img.features-image__fruit(src="img/bigGrapeFruit.png", alt="grapefruit")
+            img.features-image__badge(src="img/badges/badgefeature.png", alt="badge")
 
