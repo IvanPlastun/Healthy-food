@@ -25,6 +25,26 @@ body {
     font-style: italic;
 }
 
+.controls {
+    width: 270px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+    display: flex;
+    margin: 0 auto;
+
+    &__item {
+        display: block;
+        width: 54px;
+        height: 8px;
+        cursor: pointer;
+    }
+}
+
+.active {
+    background-image: linear-gradient(to right, #92d2a7, #5ac7cc);
+}
+
 .subtitle {
     position: relative;
     font-size: 12px;
