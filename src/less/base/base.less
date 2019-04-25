@@ -50,12 +50,58 @@ body {
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 4.8px;
+    line-height: 1;
     text-transform: uppercase;
     color: #525252;
+
+    &--change {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
 }
 
 .transition {
     transition: all 0.3s ease-in;
+}
+
+/* *************** SLIDE CONTROLS *************** */
+.slide-controls__arrow {
+    border: none;
+    width: 37px;
+    height: 25px;
+    background-color: @white;
+    color: #9f9f9f;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    margin-right: -4px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: @hoverGreenColor;
+        color: @white;
+    }
+}
+
+.slide-controls__arrow--left {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid #ebeae6;
+}
+
+.slide-controls__arrow--right {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.slide-controls__arrow--border {
+    border: solid 1px #ebebeb;
 }
 
 
@@ -73,6 +119,7 @@ body {
     font-family: @fontHelvetica;
     font-size: 11px;
     font-weight: 700;
+    text-transform: uppercase;
     line-height: 1;
     letter-spacing: 2.2px;
     color: #ffffff;

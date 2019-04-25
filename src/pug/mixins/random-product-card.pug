@@ -1,0 +1,8 @@
+mixin randomProductCard(text, boldText, imgPath, price, altText="")
+    .random-box-item-slider-card
+        .random-box-item-slider-card__img 
+            img(src=imgPath, alt=altText)
+        .random-box-item-slider-card__content
+            h6.random-box-item-slider-card__content-title #{text} #[span.bold-text #{boldText}]
+            .random-box-item-slider-card__content-line
+            span.random-box-item-slider-card__content__price #{price}

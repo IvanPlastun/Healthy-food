@@ -1,0 +1,73 @@
+section.products-random
+    section.container
+        section.products-random-logo
+            img(src="img/logo/grapefruit.png", alt="logo")
+            .products-random-logo__subtitle 
+                span.products-random-logo__subtitle-star #[i(class="fas fa-star")]
+                span.products-random-logo__subtitle-star #[i(class="fas fa-star")]
+                span.products-random-logo__subtitle-star #[i(class="fas fa-star")]
+                span.products-random-logo__subtitle-text taste of #[span.bold-text real food]
+                span.products-random-logo__subtitle-star #[i(class="fas fa-star")]
+                span.products-random-logo__subtitle-star #[i(class="fas fa-star")]
+                span.products-random-logo__subtitle-star #[i(class="fas fa-star")]
+        section.random-box
+            section.random-box-item
+                section.random-box-item-head
+                    .random-box-item-head-titles
+                        span.subtitle.subtitle--change New from the farm
+                        h5.random-box-item-head-titles__title organic #[span.bold-text new arrivals]
+                    .slide-controls
+                        button.slide-controls__arrow.slide-controls__arrow--left.slide-controls__arrow--border #[i(class="fa fa-long-arrow-left" aria-hidden="true")]
+                        button.slide-controls__arrow.slide-controls__arrow--right.slide-controls__arrow--border #[i(class="fa fa-long-arrow-right" aria-hidden="true")]
+                section.random-box-item-slider
+                    +randomProductCard("organic", "blackberry", "img/products/blackbarry.png", "$50.00", altText="blackbarry")
+                    +randomProductCard("organic", "peach", "img/products/peach.png", "$50.00", altText="peach")
+                    +randomProductCard("organic", "redbarry", "img/products/redbarry.png", "$50.00", altText="redbarry")
+            
+            section.random-box-item
+                section.random-box-item-head
+                    .random-box-item-head-titles
+                        span.subtitle.subtitle--change Best seller
+                        h5.random-box-item-head-titles__title organic #[span.bold-text popular]
+                    .slide-controls
+                        button.slide-controls__arrow.slide-controls__arrow--left.slide-controls__arrow--border #[i(class="fa fa-long-arrow-left" aria-hidden="true")]
+                        button.slide-controls__arrow.slide-controls__arrow--right.slide-controls__arrow--border #[i(class="fa fa-long-arrow-right" aria-hidden="true")]
+                section.random-box-item-slider
+                    +randomProductCard("organic", "strawbarry", "img/products/strawbarry.png", "$50.00", altText="strawbarry")
+                    +randomProductCard("organic", "mashroom", "img/products/mashroom-card.png", "$50.00", altText="mashroom")
+                    +randomProductCard("organic", "apple", "img/products/apple.png", "$50.00", altText="apple")
+            
+            section.random-box-item
+                section.random-box-item-head
+                    .random-box-item-head-titles
+                        span.subtitle.subtitle--change Costumer needs
+                        h5.random-box-item-head-titles__title organic #[span.bold-text random]
+                    .slide-controls
+                        button.slide-controls__arrow.slide-controls__arrow--left.slide-controls__arrow--border #[i(class="fa fa-long-arrow-left" aria-hidden="true")]
+                        button.slide-controls__arrow.slide-controls__arrow--right.slide-controls__arrow--border #[i(class="fa fa-long-arrow-right" aria-hidden="true")]
+                section.random-box-item-slider
+                    +randomProductCard("organic", "grapes", "img/products/grapes.png", "$50.00", altText="grapes")
+                    +randomProductCard("organic", "blackberry", "img/products/blackbarry.png", "$50.00", altText="blackbarry")
+                    +randomProductCard("organic", "beans", "img/products/beans.png", "$50.00", altText="beans")
+        section.banners
+            section.banners-banner
+                span.banners-banner__preview-text FRESH FROM OUR FARM: #[span.bold-text GREEN OLIVE]
+                section.banners-banner-content
+                    section.banners-banner-content-box
+                        span.banners-banner-content-box__kind Vegetable
+                        h3.banners-banner-content-box__title Green #[span.bold-text olive]
+                        p 35% off in june-july
+                    section.banners-banner-content-img
+                        img(src="img/big-olive.png", alt="olive")
+                    a(href="#!").banners-banner-content-box__button.banners-banner-content-box__button--color-vegetable shop now #[i(class="fa fa-long-arrow-right" aria-hidden="true")]
+            
+            section.banners-banner.banners-banner--color
+                span.banners-banner__preview-text.banners-banner__preview-text--style Fresh summer: #[span.bold-text fruits]
+                section.banners-banner-content
+                    section.banners-banner-content-box
+                        span.banners-banner-content-box__kind.banners-banner-content-box__kind--color Fruits
+                        h3.banners-banner-content-box__title All #[span.bold-text summer]
+                        p 35% off in june-july
+                    section.banners-banner-content-img.banners-banner-content-img--position
+                        img(src="img/fruitsall.png", alt="fruits")
+                    a(href="#!").banners-banner-content-box__button.banners-banner-content-box__button--color-fruit shop now #[i(class="fa fa-long-arrow-right" aria-hidden="true")]
