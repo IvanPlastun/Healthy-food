@@ -5,7 +5,7 @@ section.sale
         section.sale-head
             section.sale-head-title-wrapper
                 span.subtitle Naturix deal of the day
-                h2.sale-head__title organic goods #[span.bold-text 50%] off
+                h2.title-2 organic goods #[span.bold-text 50%] off
             section.sale-head-logo
                 img(src="img/logo/tomato-logo.png", alt="logo")
             section.sale-head-description
@@ -37,10 +37,9 @@ section.sale
                     span.card-elements__item.card-elements__item--size #[i(class="fas fa-arrows-alt")]
                 section.card-content
                     span.card-content__subtitle Organic fruits
-                    h4.card-content__title fresh #[span.bold-text rasberry]
+                    h4.title-4.sale-goods-cards__card--title-indents fresh #[span.bold-text rasberry]
                     p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy...
-                    span.card-content__price $50.00  
-                        span.card-content__price--oldprice $65.00
+                    +price("$50.00", "$65.00")
                 section.card-container
                     .sale-badges
                         span.sale-badges__badge.sale-badges__badge--new New
@@ -54,10 +53,9 @@ section.sale
                     span.card-elements__item.card-elements__item--size #[i(class="fas fa-arrows-alt")]
                 section.card-content
                     span.card-content__subtitle Organic fruits
-                    h4.card-content__title fresh #[span.bold-text pineapple]
+                    h4.title-4.sale-goods-cards__card--title-indents fresh #[span.bold-text pineapple]
                     p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy...
-                    span.card-content__price $50.00  
-                        span.card-content__price--oldprice $65.00
+                    +price("$50.00", "$65.00")
                 section.card-container
                     .sale-badges
                         span.sale-badges__badge.sale-badges__badge--new New

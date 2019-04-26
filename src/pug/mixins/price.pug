@@ -1,0 +1,4 @@
+mixin price(price, oldPrice='')
+    span.card-price #{price}
+    if (oldPrice != '')
+        span.card-price--old-price #{oldPrice}

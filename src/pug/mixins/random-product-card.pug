@@ -3,6 +3,7 @@ mixin randomProductCard(text, boldText, imgPath, price, altText="")
         .random-box-item-slider-card__img 
             img(src=imgPath, alt=altText)
         .random-box-item-slider-card__content
-            h6.random-box-item-slider-card__content-title #{text} #[span.bold-text #{boldText}]
+            h6.title-6.random-box-item-slider-card--title-indents #{text} #[span.bold-text #{boldText}]
             .random-box-item-slider-card__content-line
-            span.random-box-item-slider-card__content__price #{price}
+            .line-small-light.random-box-item-slider-card__content--line-indents
+            span.card-price #{price}

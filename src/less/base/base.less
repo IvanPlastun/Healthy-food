@@ -11,6 +11,47 @@ body {
     line-height: @baseLineHeight;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.title-1 {
+    font-size: 70px;
+    font-weight: 300;
+}
+
+.title-2 {
+    font-size: 40px;
+    font-weight: 300;
+    color: #525252;
+}
+
+.title-3 {
+    font-size: 35px;
+    font-weight: 300;
+    color: #525252;
+}
+
+.title-4 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1;
+    color: #525252;
+}
+
+.title-5 {
+    font-size: 20px;
+    color: #525252;
+    font-weight: 400;
+}
+
+.title-6 {
+    margin-bottom: 22px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #525252;
+}
+
 .container {
     width: 1170px;
     margin: 0 auto;
@@ -23,6 +64,35 @@ body {
 .green-text {
     color: @Green;
     font-style: italic;
+}
+
+/* ******************* NAVIGATION ******************* */
+.navigation__link {
+    margin-right: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    color: @baseColor;
+
+    position: relative;
+
+    &:hover::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: @hoverGreenColor;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .controls {
@@ -64,10 +134,17 @@ body {
     transition: all 0.3s ease-in;
 }
 
-.line-small {
+.line-small-green {
     width: 30px;
     height: 2px;
     background-color: #7ac200;
+}
+
+.line-small-light {
+    width: 25px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #eee;
 }
 
 /* *************** SLIDE CONTROLS *************** */
@@ -174,17 +251,17 @@ body {
     padding-top: 35px;
 }
 
-.product-card__title {
-    margin: 0;
-    margin-bottom: 8px;
-    font-size: 20px;
-    color: #525252;
-    font-weight: 400;
-}
-
-.product-card__price {
+.card-price {
     font-family: @fontHelvetica;
     font-size: 14px;
+    line-height: 1;
     font-weight: bold;
     color: #7fbb00;
+
+    &--old-price {
+        font-size: 14px;
+        text-decoration: line-through;
+        color: #ddd;
+        margin-left: 5px;
+    }
 }

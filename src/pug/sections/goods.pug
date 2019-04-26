@@ -3,7 +3,7 @@ section.goods
         section.goods-head
             span.subtitle Fresh from our farm
             section.goods-head-box
-                h2.goods-head-box__title naturix #[span.bold-text organic goods]
+                h2.title-2.goods-head-box--title-indents naturix #[span.bold-text organic goods]
             section.goods-head-filter-panel
                 button.goods-head-filter-panel__button all #[span.bold-text goods]
                 button.goods-head-filter-panel__button organic #[span.bold-text vegetables]
@@ -12,14 +12,22 @@ section.goods
                 button.goods-head-filter-panel__button all #[span.bold-text breads]
                 button.goods-head-filter-panel__button organic #[span.bold-text juices]
         section.goods-cards-wrapper
-            +goodsCard("organic", "mashroom", "img/products/mashroom.png", "$50.00", "$65.00", "mashroom")
-            +goodsCard("organic", "cherry", "img/products/product-3.png", "$50.00", "$65.00", "cherry")
-            +goodsCard("organic", "cabbage", "img/products/product-2.png", "$50.00", "$65.00", "cabbage")
-            +goodsCard("organic", "pepper", "img/products/pepper.png", "$50.00", "$65.00", "pepper")
-            +goodsCard("organic", "onion", "img/products/product-6.png", "$50.00", "$65.00", "onion")
-            +goodsCard("organic", "pineapple", "img/products/product-5.png", "$50.00", "$65.00", "pineapple")
-            +goodsCard("organic", "salad", "img/products/product-4.png", "$50.00", "$65.00", "salad")
-            +goodsCard("organic", "tomato", "img/products/product-1.png", "$50.00", "$65.00", "tomato")
+            +goodsCard("organic", "mashroom", "img/products/mashroom.png", "mashroom")
+                +price("$50.00", "$65.00")
+            +goodsCard("organic", "cherry", "img/products/product-3.png", "cherry")
+                +price("$50.00", "$65.00")
+            +goodsCard("organic", "cabbage", "img/products/product-2.png", "cabbage")
+                +price("$50.00", "$65.00")
+            +goodsCard("organic", "pepper", "img/products/pepper.png", "pepper")
+                +price("$50.00", "$65.00")
+            +goodsCard("organic", "onion", "img/products/product-6.png", "onion")
+                +price("$50.00", "$65.00")
+            +goodsCard("organic", "pineapple", "img/products/product-5.png", "true", "pineapple")
+                +price("$50.00", "$65.00")
+            +goodsCard("organic", "salad", "img/products/product-4.png", "salad")
+                +price("$50.00", "$65.00")
+            +goodsCard("organic", "tomato", "img/products/product-1.png", "tomato")
+                +price("$50.00", "$65.00")
         section.controls
             span.controls__item
             span.controls__item.active

@@ -11,10 +11,14 @@ section.product-preview
                 button.button-select organic #[span.bold-text dried fruits]
     section.slider-wrapper
         section.slider
-            +productCard("organic", "img/products/product-1.png", "tomato", "$50.00", "tomato")
-            +productCard("organic", "img/products/product-2.png", "cabbage", "$50.00", "cabbage")
-            +productCard("organic", "img/products/product-3.png", "cherry", "$50.00", "cherry")
-            +productCard("organic", "img/products/product-4.png", "ginger", "$50.00", "ginger")
+            +productCard("organic", "img/products/product-1.png", "tomato", "tomato")
+                +price("$50.00")
+            +productCard("organic", "img/products/product-2.png", "cabbage", "cabbage")
+                +price("$50.00")
+            +productCard("organic", "img/products/product-3.png", "cherry", "cherry")
+                +price("$50.00")
+            +productCard("organic", "img/products/product-4.png", "ginger", "true", "ginger")
+                +price("$50.00")
         section.controls
             span.controls__item
             span.controls__item.active

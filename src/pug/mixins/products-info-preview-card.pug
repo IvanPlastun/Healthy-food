@@ -4,6 +4,6 @@ mixin productInfoPreviewCard(titleText, titleBoldText, imgPath, quantityItems, a
             img(src=imgPath, alt=altText)
         else 
             img(src=imgPath)
-        span.products-info-preview-cards-card__line
+        span.line-small-light.products-info-preview-cards-card--line-style
         h6.products-info-preview-cards-card__title #{titleText} #[span.bold-text #{titleBoldText}]
         span.products-info-preview-cards-card__quantity #{quantityItems}

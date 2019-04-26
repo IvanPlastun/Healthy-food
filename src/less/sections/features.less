@@ -1,7 +1,22 @@
 .features {
     height: 1080px;
     padding-top: 115px;
+    position: relative;
     background-color: #f7f6f2;
+}
+
+.features__img {
+    position: absolute;
+
+    &--position-1 {
+        top: 130px;
+        left: 0;
+    }
+
+    &--position-2 {
+        top: 393px;
+        right: 0;
+    }
 }
 
 .features-description {
@@ -44,12 +59,8 @@
     bottom: 6px;
 }
 
-.features-description__title {
-    margin: 0;
+.features-description--title-indents {
     margin-bottom: 17px;
-    font-size: 40px;
-    font-weight: 300;
-    color: #525252;
 }
 
 .features-description__title--leafimg {
@@ -91,13 +102,8 @@
     }
 }
 
-.features-info-card__title {
-    margin: 0;
+.features-info-card--title-indents {
     margin-top: 29px;
-    margin-bottom: 22px;
-    font-size: 18px;
-    font-weight: 400;
-    color: #525252;
 }
 
 .features-info-card__button {

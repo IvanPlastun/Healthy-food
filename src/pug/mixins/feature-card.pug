@@ -4,7 +4,7 @@ mixin featureInfoCard(titleText, boldTitleText, imgPath, altText = "")
             img.features-info-card__img(src=imgPath, alt=altText)
         else
             img.features-info-card__img(src=imgPath)
-        h6.features-info-card__title #{titleText}  #[span.bold-text #{boldTitleText}]
+        h6.title-6.features-info-card--title-indents #{titleText}  #[span.bold-text #{boldTitleText}]
         if (block)
             block
         a.features-info-card__button(href="#!") Read more

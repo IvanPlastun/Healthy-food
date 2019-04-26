@@ -1,12 +1,20 @@
-mixin productCard(text, imgPath, boldtext, price, altText)
+mixin productCard(text, imgPath, boldtext, badge="false", altText="")
     section.product-card
         section.product-card-top
+            if (badge == "true")
+                .sale-badges.product-card--style-badges
+                    span.sale-badges__badge.sale-badges__badge--new.product-card-top--badge-indent New
+                    span.sale-badges__badge.sale-badges__badge--sale Sale
             section.product-card-top-hover-panel
-                span.product-card-top-hover-panel__icon.product-card-top-hover-panel__icon--like <i class="fas fa-heart"></i>
-                span.product-card-top-hover-panel__icon.product-card-top-hover-panel__icon--basket <i class="fas fa-shopping-basket"></i>
-                span.product-card-top-hover-panel__icon.product-card-top-hover-panel__icon--size <i class="fas fa-arrows-alt"></i>
-            img(src=imgPath, alt=altText)
+                span.product-card-top-hover-panel__icon.product-card-top-hover-panel__icon--like #[i(class="fas fa-heart")]
+                span.product-card-top-hover-panel__icon.product-card-top-hover-panel__icon--basket #[i(class="fas fa-shopping-basket")]
+                span.product-card-top-hover-panel__icon.product-card-top-hover-panel__icon--size #[i(class="fas fa-arrows-alt")]
+            if (altText)
+                img(src=imgPath, alt=altText)
+            else 
+                img(src=imgPath)
             img.product-card__style-img(src="img/svg/card-style.svg", alt="style-line")
         section.product-card-bottom
-            h6.product-card__title #{text} #[span.bold-text #{boldtext}]
-            span.product-card__price #{price}
+            h5.title-5.product-card--title-indents #{text} #[span.bold-text #{boldtext}]
+            if (block)
+                block
