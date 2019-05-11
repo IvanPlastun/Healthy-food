@@ -1,0 +1,14 @@
+mixin goodsCard(titleText, boldTitleText, imgPath, badge="false", altText="")    
+    section.goods-card
+        section.goods-card-top
+            if (altText)
+                img(src=imgPath, alt=altText)
+            else
+                img(src=imgPath)
+            if (badge == "true")
+                img.goods-card-top__badge(src="img/badges/badgefresh.png", alt="badgefresh")
+            img.goods-card__style-img(src="img/svg/card-style.svg", alt="style-line")
+        section.goods-card-bottom
+            h5.title-5.goods-card--title-indents #{titleText} #[span.bold-text #{boldTitleText}]
+            if (block)
+                block
