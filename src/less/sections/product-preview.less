@@ -54,7 +54,7 @@
     margin-bottom: 130px;
 }
 
-.slider-product-card {
+.product-card {
     width: 270px;
     height: 443px;
     border-radius: 14px;
@@ -77,13 +77,13 @@
             bottom: 0px;
         }
 
-        .slider-product-card-top {
+        .product-card-top {
             border-left: 3px solid @white;
             border-right: 3px solid @white;
             border-top: 3px solid @white;
         }
 
-        .slider-product-card-top-hover-panel {
+        .product-card-top-hover-panel {
             transition: all 0.3s ease-in;
             opacity: 1;
         }
@@ -93,54 +93,9 @@
     }
 }
 
-.slider-product-card-top {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 320px;
-    border-radius: 14px;
-    background-color: #f7f6f2;
-    position: relative;
-    z-index: 1;
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-.slider-product-card__style-img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-.slider-product-card-bottom {
-    height: 123px;
-    text-align: center;
-    padding-top: 35px;
-}
-
-.slider-product-card__title {
-    margin: 0;
-    margin-bottom: 8px;
-    font-size: 20px;
-    color: #525252;
-    font-weight: 400;
-}
-
-.slider-product-card__price {
-    font-family: @fontHelvetica;
-    font-size: 14px;
-    font-weight: bold;
-    color: #7fbb00;
-}
-
 
 /* ********************** HOVER PANEL *********************** */
-.slider-product-card-top-hover-panel {
+.product-card-top-hover-panel {
     width: 182px;
     height: 45px;
     border-radius: 22.5px;
@@ -157,7 +112,7 @@
     opacity: 0;
 }
 
-.slider-product-card-top-hover-panel__icon {
+.product-card-top-hover-panel__icon {
     display: flex;
     align-items: center;
     padding: 0 18px;
@@ -166,15 +121,15 @@
     transition: all 0.3s ease-in;
 }
 
-.slider-product-card-top-hover-panel__icon--like:hover {
+.product-card-top-hover-panel__icon--like:hover {
     color: rgb(255, 0, 64);
 }
 
-.slider-product-card-top-hover-panel__icon--size:hover {
+.product-card-top-hover-panel__icon--size:hover {
     color: #4fc3d8;
 }
 
-.slider-product-card-top-hover-panel__icon--basket {
+.product-card-top-hover-panel__icon--basket {
     border-left: 2px solid #f7f6f2;
     border-right: 2px solid #f7f6f2;
 
@@ -183,23 +138,15 @@
     }
 }
 
-/* ********************** SLIDER CONTROLS *********************** */
-.slider-controls {
-    width: 270px;
-    height: 8px;
-    border-radius: 4px;
-    background-color: #f7f7f7;
-    display: flex;
-    margin: 0 auto;
-
-    &__item {
-        display: block;
-        width: 54px;
-        height: 8px;
-        cursor: pointer;
-    }
+.product-card--style-badges {
+    position: absolute;
+    top: 53px;
 }
 
-.active {
-    background-image: linear-gradient(to right, #92d2a7, #5ac7cc);
+.product-card-top--badge-indent {
+    margin-right: 10px;
+}
+
+.product-card--title-indents {
+    margin-bottom: 8px;
 }

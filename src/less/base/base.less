@@ -11,6 +11,47 @@ body {
     line-height: @baseLineHeight;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.title-1 {
+    font-size: 70px;
+    font-weight: 300;
+}
+
+.title-2 {
+    font-size: 40px;
+    font-weight: 300;
+    color: #525252;
+}
+
+.title-3 {
+    font-size: 35px;
+    font-weight: 300;
+    color: #525252;
+}
+
+.title-4 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1;
+    color: #525252;
+}
+
+.title-5 {
+    font-size: 20px;
+    color: #525252;
+    font-weight: 400;
+}
+
+.title-6 {
+    margin-bottom: 22px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #525252;
+}
+
 .container {
     width: 1170px;
     margin: 0 auto;
@@ -23,4 +64,204 @@ body {
 .green-text {
     color: @Green;
     font-style: italic;
+}
+
+/* ******************* NAVIGATION ******************* */
+.navigation__link {
+    margin-right: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    color: @baseColor;
+
+    position: relative;
+
+    &:hover::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: @hoverGreenColor;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.controls {
+    width: 270px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+    display: flex;
+    margin: 0 auto;
+
+    &__item {
+        display: block;
+        width: 54px;
+        height: 8px;
+        cursor: pointer;
+    }
+}
+
+.active {
+    background-image: linear-gradient(to right, #92d2a7, #5ac7cc);
+}
+
+.subtitle {
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 4.8px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #525252;
+
+    &--change {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+}
+
+.transition {
+    transition: all 0.3s ease-in;
+}
+
+.line-small-green {
+    width: 30px;
+    height: 2px;
+    background-color: #7ac200;
+}
+
+.line-small-light {
+    width: 25px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #eee;
+}
+
+/* *************** SLIDE CONTROLS *************** */
+.slide-controls__arrow {
+    border: none;
+    width: 37px;
+    height: 25px;
+    background-color: @white;
+    color: #9f9f9f;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    margin-right: -4px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: @hoverGreenColor;
+        color: @white;
+    }
+}
+
+.slide-controls__arrow--left {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid #ebeae6;
+}
+
+.slide-controls__arrow--right {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.slide-controls__arrow--border {
+    border: solid 1px #ebebeb;
+}
+
+
+/* *************** SALE BADGE ************************ */
+.sale-badges {
+    display: flex;
+    justify-content: center;
+}
+
+.sale-badges__badge {
+    display: inline-block;
+    padding: 6px 21px;
+    margin-right: 3px;
+    border-radius: 12px;
+    font-family: @fontHelvetica;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 2.2px;
+    color: #ffffff;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--new {
+        background-color: #92d2a7;
+    }
+
+    &--sale {
+        background-color: #79d1d6;
+    }
+}
+
+/* *************** CARD INSIDE STYLES **************** */
+.product-card-top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 320px;
+    border-radius: 14px;
+    background-color: #f7f6f2;
+    position: relative;
+    z-index: 1;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.product-card__style-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.product-card-bottom {
+    height: 123px;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.card-price {
+    font-family: @fontHelvetica;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: bold;
+    color: #7fbb00;
+
+    &--old-price {
+        font-size: 14px;
+        text-decoration: line-through;
+        color: #ddd;
+        margin-left: 5px;
+    }
 }

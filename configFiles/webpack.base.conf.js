@@ -18,7 +18,7 @@ module.exports = {
     },
     output: {
         filename: `${PATHS.assets}/js/[name].js`,
-        path: path.resolve(__dirname, '../dist'),
+        path: PATHS.dist,
         publicPath: '/'
     },
     module: {
@@ -50,19 +50,37 @@ module.exports = {
                 ]
             },
             {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {sourceMap: true}
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true,
+                            config: {path: `${PATHS.src}/js/postcss.config.js`}
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.less$/,
                 use: [
                     'style-loader',
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'less-loader',
                     {
                         loader: 'postcss-loader',
                         options: {
                             sourceMap: true,
                             config: { path: `${PATHS.src}/js/postcss.config.js` }
                         }
-                    }
+                    },
+                    'less-loader'
                 ]
             }
         ]
@@ -78,7 +96,7 @@ module.exports = {
             filename: 'index.html'
         }),
         new CopyWebpackPlugin([
-            { from: `${PATHS.src}/img`, to: `${PATHS.assets}/img` },
+            { from: `${PATHS.src}/img`, to: `${PATHS.assets}/img/` },
             { from: `${PATHS.src}/static` }
         ])
     ]
